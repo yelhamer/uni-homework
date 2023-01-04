@@ -32,7 +32,7 @@ int main(int argc, char **argv) {
 		exit(1);
 	}
 	// method number
-	if(method_number < 0 && method_number > 3) {
+	if(method_number < 0 || method_number > 3) {
 		perror("Method number must be 0, 1, or 2");
 		exit(1);
 	}

@@ -6,8 +6,16 @@
 #include <sys/time.h>
 #include <time.h>
 
+struct _exVals {
+	int min;
+	int max;
+};
+
+typedef struct _exVals exVals_t;
 
 // Function signatures
 _Bool rechElets_TabNonTries(int *, int, int);
 _Bool rechElets_TabTries(int *, int, _Bool, int );
 _Bool rechElets_Dicho(int *, int, int, _Bool);
+exVals_t MinEtMaxA(int *a, int);
+exVals_t MinEtMaxB(int *a, int);
