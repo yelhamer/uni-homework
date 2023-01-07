@@ -11,14 +11,17 @@ exVals_t MinEtMaxA(int *arr, int len) {
 
 	// Initialize to the first element
 	mm.min = mm.max = arr[0];
+	mm.cpt = 0;
 
 	// Find minimum and maximum
 	for(int i = 1; i < len; i++) {
-		if(mm.min > arr[i]) 
+		if(mm.min > arr[i])
 			mm.min = arr[i];
 
 		if(mm.max < arr[i])
 			mm.max = arr[i];
+
+		mm.cpt += 2;
 	}
 
 	// Return the minimum and maximum
@@ -38,6 +41,7 @@ exVals_t MinEtMaxB(int *arr, int len) {
 	
 	// Initialize to the first element
 	mm.min = mm.max = arr[0];
+	mm.cpt = 0;
 
 	// Partition elements
 	for(int i = 0; i < (len & !1) ; i+=2) {
@@ -46,6 +50,8 @@ exVals_t MinEtMaxB(int *arr, int len) {
 			arr[i] = arr[i+1];
 			arr[i+1] = temp;
 		}
+
+		mm.cpt++;
 	}
 
 	// Find minimum and maximum
@@ -59,6 +65,8 @@ exVals_t MinEtMaxB(int *arr, int len) {
 			if(mm.min > arr[i])
 				mm.min = arr[i];
 		}
+
+		mm.cpt++;
 	}
 
 	// Necessary if the array has an odd number of elements
@@ -66,6 +74,8 @@ exVals_t MinEtMaxB(int *arr, int len) {
 		mm.max = arr[len-1];
 	if(mm.min > arr[len-1])
 		mm.min = arr[len-1];
+
+	mm.cpt += 2;
 
 	// Return the minimum and maximum
 	return mm;

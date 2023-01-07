@@ -39,12 +39,12 @@ _Bool rechElets_Dicho(int *arr, int len, int x, _Bool asc_order) {
 	// Bisection Algorithm
 	while(start < end && arr[start+distance/2] != x) {
 		if(asc_order) {
-			start = arr[start+len/2] < x ? start+distance/2 : start;
-			end = arr[start+len/2] > x ? start+distance/2 : end;
+			start = arr[start+distance/2] < x ? start+distance/2 : start;
+			end = arr[start+distance/2] > x ? start+distance/2 : end;
 
 		} else {
-			start = arr[start+len/2] > x ? start+distance/2 : start;
-			end = arr[start+len/2] < x ? start+distance/2 : end;
+			start = arr[start+distance/2] > x ? start+distance/2 : start;
+			end = arr[start+distance/2] < x ? start+distance/2 : end;
 
 		}
 

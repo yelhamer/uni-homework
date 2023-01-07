@@ -9,6 +9,7 @@
 struct _exVals {
 	int min;
 	int max;
+	int cpt; // A counter for the number of comparisons
 };
 
 typedef struct _exVals exVals_t;

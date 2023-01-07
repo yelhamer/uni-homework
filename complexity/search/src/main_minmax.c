@@ -78,7 +78,7 @@ int main(int argc, char **argv) {
 	end = tv.tv_usec;
 	
 	// Print execution time
-	printf("Minimum: %d\nMaximum: %d\n", mm.min, mm.max);
+	printf("Minimum: %d\nMaximum: %d\nComparisons: %d\n", mm.min, mm.max, mm.cpt);
 	printf("Execution time for size %d: %ld\n", len, end-start);
 
 
