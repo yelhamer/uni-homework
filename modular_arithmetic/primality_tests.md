@@ -41,14 +41,12 @@ This algorithm is a probabilistic algorithm, in that it does not assert whether 
 According to fermat's little theorem, the following equation holds true for all prime numbers and generally does not for composite numbers:
 
 ![flt\_general](https://raw.githubusercontent.com/yelhamer/uni_homework/master/modular_arithmetic/imgs/flt_general.png)
-_fermat's little theorem_
 
 Where is any prime number, and a is any natural number.
 
 A corollary that follows is the following theorem:
 
 ![flt](https://raw.githubusercontent.com/yelhamer/uni_homework/master/modular_arithmetic/imgs/flt.png)
-_fermat's restricted little theorem_
 
 Where a is not divisible by p.
 
