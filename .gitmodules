@@ -1,0 +1,3 @@
+[submodule "light-C-server"]
+	path = light-C-server
+	url = https://github.com/yelhamer/light-C-server.git
